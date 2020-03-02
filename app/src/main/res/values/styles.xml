@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="white_water" parent="android:Widget.ImageButton">
+        <item name="android:background">#00FFFFFF</item>
+        <item name="android:tint">#FFFFFFFF</item>
+    </style>
+
+    <style name="action_button">
+        <item name="android:background">@drawable/bg_action_button</item>
+        <item name="android:onClick">onActionClick</item>
+        
+    </style>
+
+</resources>

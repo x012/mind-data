@@ -1,0 +1,147 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+* .hgignore
+* .hgtags
+* .idea\
+* .idea\encodings.xml
+* .idea\libraries\
+* .idea\libraries\annotations_d18334d52773ae0e069851a4dfc34e1f.xml
+* .idea\misc.xml
+* .idea\modules.xml
+* .idea\workspace.xml
+* Mind Data.eml
+* Mind Data.iml
+* MindData.iml
+* classes\
+* classes\res-cache\
+* classes\res-cache\Mind Data\
+* classes\res-cache\Mind Data\drawable-hdpi\
+* classes\res-cache\Mind Data\drawable-hdpi\ic_launcher.png
+* classes\res-cache\Mind Data\drawable-ldpi\
+* classes\res-cache\Mind Data\drawable-ldpi\ic_launcher.png
+* classes\res-cache\Mind Data\drawable-mdpi\
+* classes\res-cache\Mind Data\drawable-mdpi\btn_default_focused_holo.9.png
+* classes\res-cache\Mind Data\drawable-mdpi\btn_default_normal_holo.9.png
+* classes\res-cache\Mind Data\drawable-mdpi\btn_default_pressed_holo.9.png
+* classes\res-cache\Mind Data\drawable-mdpi\ic_add.png
+* classes\res-cache\Mind Data\drawable-mdpi\ic_arrow.png
+* classes\res-cache\Mind Data\drawable-mdpi\ic_connect.png
+* classes\res-cache\Mind Data\drawable-mdpi\ic_highlight.png
+* classes\res-cache\Mind Data\drawable-mdpi\ic_launcher.png
+* classes\res-cache\Mind Data\drawable-mdpi\ic_remove.png
+* classes\res-cache\Mind Data\drawable-xhdpi\
+* classes\res-cache\Mind Data\drawable-xhdpi\ic_launcher.png
+* classes\res-cache\Mind Data\drawable\
+* classes\res-cache\Mind Data\drawable\coord.png
+* classes\res-cache\Mind Data\drawable\rybeg.png
+* classes\res-cache\Mind Data\drawable\rybeg2.png
+* classes\res-cache\Mind Data\drawable\stripes.png
+* ic_launcher-web.png
+* out\
+* out\production\
+* out\production\MindData\
+* out\production\MindData\MindData.apk
+* out\production\MindData\MindData.unaligned.apk
+* out\production\MindData\com\
+* out\production\MindData\com\angel\
+* out\production\MindData\com\angel\activity\
+* out\production\MindData\com\angel\activity\EditTextWithBackEvent$EditTextImeBackListener.class
+* out\production\MindData\com\angel\activity\EditTextWithBackEvent.class
+* out\production\MindData\com\angel\activity\MindDataActivity$1.class
+* out\production\MindData\com\angel\activity\MindDataActivity$2.class
+* out\production\MindData\com\angel\activity\MindDataActivity$3.class
+* out\production\MindData\com\angel\activity\MindDataActivity$4.class
+* out\production\MindData\com\angel\activity\MindDataActivity$5.class
+* out\production\MindData\com\angel\activity\MindDataActivity$6.class
+* out\production\MindData\com\angel\activity\MindDataActivity$EditMode.class
+* out\production\MindData\com\angel\activity\MindDataActivity.class
+* out\production\MindData\com\angel\activity\Shared.class
+* out\production\MindData\com\angel\graphdatabase\
+* out\production\MindData\com\angel\graphdatabase\EdgesTable.class
+* out\production\MindData\com\angel\graphdatabase\GraphDatabase.class
+* out\production\MindData\com\angel\graphdatabase\GraphDbOpenHelper.class
+* out\production\MindData\com\angel\graphdatabase\MetaDataTable.class
+* out\production\MindData\com\angel\graphdatabase\NodesTable.class
+* out\production\MindData\com\angel\graphview\
+* out\production\MindData\com\angel\graphview\Edge.class
+* out\production\MindData\com\angel\graphview\GraphView$1.class
+* out\production\MindData\com\angel\graphview\GraphView$Callbacks.class
+* out\production\MindData\com\angel\graphview\GraphView$Command.class
+* out\production\MindData\com\angel\graphview\GraphView.class
+* out\production\MindData\com\angel\graphview\Node.class
+* out\production\MindData\com\angel\graphview\components\
+* out\production\MindData\com\angel\graphview\components\CenterEdgeRelaxer.class
+* out\production\MindData\com\angel\graphview\components\EdgeRelaxer.class
+* out\production\MindData\com\angel\graphview\components\FastRepulsor.class
+* out\production\MindData\com\angel\graphview\components\GestureAndTransformationHandler$GestureData.class
+* out\production\MindData\com\angel\graphview\components\GestureAndTransformationHandler$OnGestureListener.class
+* out\production\MindData\com\angel\graphview\components\GestureAndTransformationHandler.class
+* out\production\MindData\com\angel\graphview\components\HandlerAnimatedView$1.class
+* out\production\MindData\com\angel\graphview\components\HandlerAnimatedView.class
+* out\production\MindData\com\angel\graphview\components\MatrixPool.class
+* out\production\MindData\com\angel\graphview\components\NormalRepulsor.class
+* out\production\MindData\com\angel\graphview\components\Repulsor.class
+* out\production\MindData\com\angel\graphview\components\VisibleEdgeRelaxer.class
+* out\production\MindData\com\angel\graphview\edgepainter\
+* out\production\MindData\com\angel\graphview\edgepainter\EdgeDrawable.class
+* out\production\MindData\com\angel\graphview\edgepainter\EdgePainter.class
+* out\production\MindData\com\angel\graphview\edgepainter\GreenV.class
+* out\production\MindData\com\angel\graphview\edgepainter\GreenX.class
+* out\production\MindData\com\angel\graphview\edgepainter\Plain.class
+* out\production\MindData\com\angel\graphview\edgepainter\RedV.class
+* out\production\MindData\com\angel\graphview\edgepainter\RedX.class
+* out\production\MindData\com\angel\indexdb\
+* out\production\MindData\com\angel\indexdb\IndexActivity.class
+* out\production\MindData\com\angel\indexdb\IndexDbAdapter.class
+* out\production\MindData\com\angel\indexdb\IndexDbHelper.class
+* out\production\MindData\com\angel\indexdb\IndexTable.class
+* out\production\MindData\com\angel\indexdb\TitleEditorActivity.class
+* out\production\MindData\com\angel\mind\
+* out\production\MindData\com\angel\mind\BuildConfig.class
+* out\production\MindData\com\angel\mind\R$anim.class
+* out\production\MindData\com\angel\mind\R$attr.class
+* out\production\MindData\com\angel\mind\R$color.class
+* out\production\MindData\com\angel\mind\R$dimen.class
+* out\production\MindData\com\angel\mind\R$drawable.class
+* out\production\MindData\com\angel\mind\R$id.class
+* out\production\MindData\com\angel\mind\R$layout.class
+* out\production\MindData\com\angel\mind\R$menu.class
+* out\production\MindData\com\angel\mind\R$string.class
+* out\production\MindData\com\angel\mind\R$style.class
+* out\production\MindData\com\angel\mind\R.class
+* uml\
+* uml\beforecallbacks.ucls
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+* AndroidManifest.xml => app\src\main\AndroidManifest.xml
+* assets\ => app\src\main\assets\
+* lint.xml => app\lint.xml
+* proguard-project.txt => app\proguard-project.txt
+* res\ => app\src\main\res\
+* src\ => app\src\main\java\
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)

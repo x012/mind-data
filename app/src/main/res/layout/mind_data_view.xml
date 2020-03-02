@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:id="@+id/toolbar_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="0dp"
+        android:background="#80000000"
+        android:clickable="true"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <com.angel.activity.EditTextWithBackEvent
+            android:id="@+id/node_label_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="4dp"
+            android:background="#00000000"
+            android:hint="@string/node_label"
+            android:imeOptions="flagNoExtractUi"
+            android:paddingBottom="2dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="2dp"
+            android:singleLine="false"
+            android:textColor="#FFFFFFFF"
+            android:visibility="visible" >
+
+            <requestFocus />
+        </com.angel.activity.EditTextWithBackEvent>
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="wrap_content"
+            android:layout_height="2dp"
+            android:background="#FF123456" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <ImageButton
+                android:id="@+id/button_done"
+                style="@style/action_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:contentDescription="@string/done"
+                android:src="@drawable/ic_action_done" />
+
+            <ImageButton
+                android:id="@+id/button_cancel"
+                style="@style/action_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:contentDescription="@string/cancel"
+                android:src="@drawable/ic_action_cancel" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:background="#80101010"
+        android:scrollbars="vertical" >
+
+        <LinearLayout
+            android:id="@+id/toolbar_actions"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:clickable="true"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:visibility="visible" >
+
+            <ImageButton
+                android:id="@+id/button_new"
+                style="@style/action_button"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/desc_new_button"
+                android:src="@drawable/ic_add" />
+
+            <ImageButton
+                android:id="@+id/button_edit"
+                style="@style/action_button"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/desc_new_button"
+                android:src="@drawable/ic_pencil" />
+
+            <ImageButton
+                android:id="@+id/button_delete"
+                style="@style/action_button"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/desc_delete_button"
+                android:src="@drawable/ic_remove" />
+
+            <ImageButton
+                android:id="@+id/button_connect"
+                style="@style/action_button"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/desc_connect_button"
+                android:src="@drawable/ic_connect" />
+
+            <ImageButton
+                android:id="@+id/button_highlight"
+                style="@style/action_button"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/desc_highlight_button"
+                android:src="@drawable/ic_highlight" />
+
+            <ImageButton
+                android:id="@+id/button_arrow"
+                style="@style/action_button"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/desc_edge_button"
+                android:src="@drawable/ic_arrow" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+</RelativeLayout>
