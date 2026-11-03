@@ -347,7 +347,7 @@ public class GestureAndTransformationHandler {
 					float rangeEsq = dxE * dxE + dyE * dyE;
 
 					// New way (no-rot.)
-					float scale = (float) FloatMath.sqrt(rangeEsq / rangeSsq);
+					float scale = (float) Math.sqrt(rangeEsq / rangeSsq);
 					momentum.postScale(scale, scale, cxS, cyS);
 					momentum.postTranslate(cxE - cxS, cyE - cyS);
 				}
@@ -406,7 +406,7 @@ public class GestureAndTransformationHandler {
 					float rangeEsq = dxE * dxE + dyE * dyE;
 
 					// New way (no-rot.)
-					float scale = FloatMath.sqrt(rangeEsq / rangeSsq);
+					float scale = (float) Math.sqrt(rangeEsq / rangeSsq);
 					trans.postScale(scale, scale, cxS, cyS);
 					trans.postTranslate(cxE - cxS, cyE - cyS);
 				}

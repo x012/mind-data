@@ -264,7 +264,7 @@ public class GraphView extends HandlerAnimatedView implements
 	private void applyFriction() {
 		final ArrayList<Node> nodes = mGraphDatabase.getNodes();
 		for (Node n : nodes) {
-			float abs = FloatMath.sqrt(n.vx * n.vx + n.vy * n.vy);
+			float abs = (float) Math.sqrt(n.vx * n.vx + n.vy * n.vy);
 			if (abs > FRICTION) {
 				n.vx -= n.vx / abs * FRICTION;
 				n.vy -= n.vy / abs * FRICTION;
@@ -285,7 +285,7 @@ public class GraphView extends HandlerAnimatedView implements
 		for (Node n : nodes) {
 
 			// normalize & calculate
-			float dist2 = FloatMath.sqrt(n.cx * n.cx + n.cy * n.cy);
+			float dist2 = (float) Math.sqrt(n.cx * n.cx + n.cy * n.cy);
 			if (dist2 > NO_GRAVITY_CIRCLE_2) {
 				n.vx -= n.cx / dist2 * gravity;
 				n.vy -= n.cy / dist2 * gravity;
@@ -311,9 +311,9 @@ public class GraphView extends HandlerAnimatedView implements
 		if (mSelected != null) {
 			float ang = Shared.RND.nextFloat() * (float) Math.PI * 2;
 
-			n.cx = mSelected.cx + FloatMath.cos(ang)
+			n.cx = mSelected.cx + (float) Math.cos(ang)
 					* EdgeRelaxer.TARGET_LENGTH * 2;
-			n.cy = mSelected.cy + FloatMath.sin(ang)
+			n.cy = mSelected.cy + (float) Math.sin(ang)
 					* EdgeRelaxer.TARGET_LENGTH * 2;
 
 			if (!mInvertedEdge) {

@@ -7,10 +7,10 @@ import android.graphics.Matrix;
 import android.util.FloatMath;
 
 public class Shared {
-	private static final String[] SYL = { "tá", "dé", "ba", "ra", "ló", "ku",
-			"ma", "se", "pó", "ci", "sa", "bi", "ha", "sza", "bü", "dös",
-			"pun", "ki", "ter", "kes", "pás", "li", "szo", "fi", "pi", "ros",
-			"al", "ku", "sa", "nyó", "fó", "der", "só", "ger", "gõ", "rom",
+	private static final String[] SYL = { "tï¿½", "dï¿½", "ba", "ra", "lï¿½", "ku",
+			"ma", "se", "pï¿½", "ci", "sa", "bi", "ha", "sza", "bï¿½", "dï¿½s",
+			"pun", "ki", "ter", "kes", "pï¿½s", "li", "szo", "fi", "pi", "ros",
+			"al", "ku", "sa", "nyï¿½", "fï¿½", "der", "sï¿½", "ger", "gï¿½", "rom",
 			"ka", "a"
 
 	};
@@ -46,7 +46,7 @@ public class Shared {
 		m.getValues(values);
 		float xscale = values[Matrix.MSCALE_X];
 		float xskew = values[Matrix.MSKEW_X];
-		float zoom = FloatMath.sqrt(xscale * xscale + xskew * xskew);
+		float zoom = (float) Math.sqrt(xscale * xscale + xskew * xskew);
 		return zoom;
 	}
 	
@@ -55,7 +55,7 @@ public class Shared {
 		m.getValues(values);
 		float xscale = values[Matrix.MSCALE_X];
 		float xskew = values[Matrix.MSKEW_X];
-		float zoom = FloatMath.sqrt(xscale * xscale + xskew * xskew);
+		float zoom = (float) Math.sqrt(xscale * xscale + xskew * xskew);
 		values[Matrix.MSKEW_X] = 0;
 		values[Matrix.MSKEW_Y] = 0;
 		values[Matrix.MSCALE_X] = zoom;

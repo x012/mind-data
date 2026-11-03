@@ -1,13 +1,19 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 18
-    buildToolsVersion "29.0.3"
+    namespace 'com.angel.mind'
+    compileSdkVersion 34
 
     defaultConfig {
         applicationId "com.angel.mind"
         minSdkVersion 10
         targetSdkVersion 10
+    }
+
+    compileOptions {
+        encoding = 'ISO-8859-1'
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 
     buildTypes {

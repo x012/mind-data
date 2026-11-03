@@ -26,7 +26,7 @@ public class CenterEdgeRelaxer extends EdgeRelaxer {
 			dy = n1.cy - n0.cy;
 
 			float sqlen = dx * dx + dy * dy;
-			float len = FloatMath.sqrt(sqlen);
+			float len = (float) Math.sqrt(sqlen);
 
 			// Increase edge length based on node size
 			// float sizeMod = vn0.getWidth() + vn1.getWidth() - 100;
