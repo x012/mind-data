@@ -77,8 +77,7 @@ public class IndexActivity extends ListActivity {
 	}
 
 	public boolean onMenuItemSelected(int featureId, MenuItem item) {
-		switch (item.getItemId()) {
-		case R.id.menu_new:
+		if (item.getItemId() == R.id.menu_new) {
 			createRow();
 			return true;
 		}

@@ -117,38 +117,30 @@ public class MindDataActivity extends Activity implements GraphView.Callbacks {
 
 	public void onActionClick(View v) {
 		int viewId = v.getId();
-		switch (viewId) {
-		case R.id.button_new:
+		if (viewId == R.id.button_new) {
 			mEditMode = EditMode.NEW;
 			mEditText.setText("");
 			startEdit();
-			break;
-		case R.id.button_edit:
+		} else if (viewId == R.id.button_edit) {
 			if (mGraphView.isNodeSelected()) {
 				mEditMode = EditMode.EDIT;
 				setTextFieldText(mGraphView.getSelectedText());
 				startEdit();
 			}
-			break;
-		case R.id.button_delete:
+		} else if (viewId == R.id.button_delete) {
 			mGraphView.postCommand(GraphView.Command.DELETE_NODE);
-			break;
-		case R.id.button_connect:
+		} else if (viewId == R.id.button_connect) {
 			mGraphView.postCommand(GraphView.Command.CONNECT);
-			break;
-		case R.id.button_highlight:
+		} else if (viewId == R.id.button_highlight) {
 			mGraphView.postCommand(GraphView.Command.HIGHLIGHT);
-			break;
-		case R.id.button_arrow:
+		} else if (viewId == R.id.button_arrow) {
 			mGraphView.postCommand(GraphView.Command.CHANGE_EDGE);
 			updateArrowImage(v);
 
 			// showPopupWindow(v);
 
 			// v.setBackgroundDrawable(ed);
-
-			break;
-		case R.id.button_done:
+		} else if (viewId == R.id.button_done) {
 			switch (mEditMode) {
 			case NEW:
 				String labelText = mEditText.getText().toString();
@@ -163,11 +155,8 @@ public class MindDataActivity extends Activity implements GraphView.Callbacks {
 				stopEdit();
 				break;
 			}
-
-			break;
-		case R.id.button_cancel:
+		} else if (viewId == R.id.button_cancel) {
 			stopEdit();
-			break;
 		}
 
 	}

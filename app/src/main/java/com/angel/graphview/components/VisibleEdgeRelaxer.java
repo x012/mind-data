@@ -42,8 +42,8 @@ public class VisibleEdgeRelaxer extends EdgeRelaxer {
 			len = (len == 0) ? .0001f : len;
 
 			float f = ((TARGET_LENGTH) - len) / (len * EDGE_SOFTNESS);
-			float vmodx = f * dx;
-			float vmody = f * dy;
+			float vmodx = f * dx * 0.5f;
+			float vmody = f * dy * 0.5f;
 
 			// Apply the modification in the velocity
 			n0.vx -= vmodx;

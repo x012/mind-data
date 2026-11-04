@@ -45,14 +45,14 @@ public class FastRepulsor extends Repulsor {
 					if (distSq < 1) {
 
 						// Too close, so just shake 'em
-						vmodx = (Shared.RND.nextFloat() - 0.5f) * 10;
-						vmody = (Shared.RND.nextFloat() - 0.5f) * 10;
+						vmodx = (Shared.RND.nextFloat() - 0.5f) * 5;
+						vmody = (Shared.RND.nextFloat() - 0.5f) * 5;
 					} else {
 
 						// In range, push 'em apart
 						float mod = (SPACE_DIST_SQ - distSq) / SPACE_DIST_SQ;
-						vmodx = (dx * mod) / distSq * SPACE_HARDNESS;
-						vmody = (dy * mod) / distSq * SPACE_HARDNESS;
+						vmodx = (dx * mod) / distSq * SPACE_HARDNESS * 0.5f;
+						vmody = (dy * mod) / distSq * SPACE_HARDNESS * 0.5f;
 					}
 					n1.vx += vmodx;
 					n1.vy += vmody;

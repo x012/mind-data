@@ -28,8 +28,8 @@ public class NormalRepulsor extends Repulsor {
 				if (distSq < 1) {
 
 					// Too close, so just shake 'em
-					dx = Shared.RND.nextFloat() - 0.5f;
-					dy = Shared.RND.nextFloat() - 0.5f;
+					dx = (Shared.RND.nextFloat() - 0.5f) * 0.5f;
+					dy = (Shared.RND.nextFloat() - 0.5f) * 0.5f;
 					n1.vx += dx;
 					n1.vy += dy;
 					n2.vx -= dx;
@@ -39,8 +39,8 @@ public class NormalRepulsor extends Repulsor {
 
 					// In range, push 'em apart
 					float mod = (SPACE_DIST_SQ - distSq) / SPACE_DIST_SQ;
-					dx = (difX * mod) / distSq * SPACE_HARDNESS;
-					dy = (difY * mod) / distSq * SPACE_HARDNESS;
+					dx = (difX * mod) / distSq * SPACE_HARDNESS * 0.5f;
+					dy = (difY * mod) / distSq * SPACE_HARDNESS * 0.5f;
 					n1.vx += dx;
 					n1.vy += dy;
 					n2.vx -= dx;

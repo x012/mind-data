@@ -12,7 +12,7 @@ import android.view.View;
  */
 public abstract class HandlerAnimatedView extends View {
 
-	private static final int FPS = 30;
+	private static final int FPS = 60;
 
 	private static final int SEC = 1000;
 

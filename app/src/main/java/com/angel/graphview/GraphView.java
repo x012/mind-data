@@ -46,11 +46,11 @@ public class GraphView extends HandlerAnimatedView implements
 
 	public static final boolean ANTI_ALIAS = true;
 
-	private static final float AIR_FRICTION_COEFF = .8f;
+	private static final float AIR_FRICTION_COEFF = (float) Math.sqrt(.8f);
 
 	private static final int BG_COLOR;
 
-	private static final double FRICTION = 0.05; // pixels / frametime ^ 2
+	private static final double FRICTION = 0.05 / 2.0; // pixels / frametime ^ 2
 
 	// Circle radius in which no centralizing gravity applied (squared, px)
 	private static final float NO_GRAVITY_CIRCLE_2 = 1000;
@@ -281,7 +281,7 @@ public class GraphView extends HandlerAnimatedView implements
 
 	private void centralize() {
 		final ArrayList<Node> nodes = mGraphDatabase.getNodes();
-		float gravity = 1;
+		float gravity = 0.5f;
 		for (Node n : nodes) {
 
 			// normalize & calculate

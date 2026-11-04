@@ -35,7 +35,7 @@ public class GestureAndTransformationHandler {
 	}
 
 	private static final float DRAG_THRESHOLD_SQ = 7 * 7;
-	private static final float MOMENTUM_DIEOUT = .25f;
+	private static final float MOMENTUM_DIEOUT = 1f - (float) Math.sqrt(1f - .25f);
 
 	static {
 		// fill up Matrix pool
@@ -381,7 +381,7 @@ public class GestureAndTransformationHandler {
 				// Apply the two finger transformation to our matrix
 				System.arraycopy(pl, 0, ppl, 0, 4);
 				for (int i = 0; i < 4; i++) {
-					pl[i] = pl[i] * .3f + pe[i] * .7f;
+					pl[i] = pl[i] * (float) Math.sqrt(0.3f) + pe[i] * (1f - (float) Math.sqrt(0.3f));
 				}
 
 				Matrix trans = MatrixPool.get();
@@ -421,7 +421,7 @@ public class GestureAndTransformationHandler {
 				// Apply the one finger transformation to our matrix
 				System.arraycopy(pl, 0, ppl, 0, 2);
 				for (int i = 0; i < 2; i++) {
-					pl[i] = pl[i] * .3f + pe[i] * .7f;
+					pl[i] = pl[i] * (float) Math.sqrt(0.3f) + pe[i] * (1f - (float) Math.sqrt(0.3f));
 				}
 
 				final Matrix other = MatrixPool.get();
