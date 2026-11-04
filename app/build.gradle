@@ -6,8 +6,8 @@ android {
 
     defaultConfig {
         applicationId "com.angel.mind"
-        minSdkVersion 10
-        targetSdkVersion 10
+        minSdkVersion 21
+        targetSdkVersion 34
     }
 
     compileOptions {
