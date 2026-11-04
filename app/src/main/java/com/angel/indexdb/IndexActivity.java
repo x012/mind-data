@@ -49,6 +49,18 @@ public class IndexActivity extends ListActivity {
 		// insertTest();
 		fillData();
 
+		View fab = findViewById(R.id.fab_new);
+		fab.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				createRow();
+			}
+		});
+	}
+
+	private void createRow() {
+		mIndexDbAdaper.createRow(Shared.createRandomString());
+		fillData();
 	}
 
 	private void fillData() {
@@ -67,8 +79,7 @@ public class IndexActivity extends ListActivity {
 	public boolean onMenuItemSelected(int featureId, MenuItem item) {
 		switch (item.getItemId()) {
 		case R.id.menu_new:
-			mIndexDbAdaper.createRow(Shared.createRandomString());
-			fillData();
+			createRow();
 			return true;
 		}
 		return super.onMenuItemSelected(featureId, item);

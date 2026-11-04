@@ -9,6 +9,7 @@
     <string name="menu_settings">Settings</string>
     <string name="title_activity_chooser">Select Mind Map</string>
     <string name="menu_new">New</string>
+    <string name="fab_create">+</string>
 	<string name="menu_delete">Delete</string>
 	<string name="menu_edit_title">Edit Title</string>
 	<string name="title">Title</string>

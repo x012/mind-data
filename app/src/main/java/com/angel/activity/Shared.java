@@ -7,10 +7,10 @@ import android.graphics.Matrix;
 import android.util.FloatMath;
 
 public class Shared {
-	private static final String[] SYL = { "t�", "d�", "ba", "ra", "l�", "ku",
-			"ma", "se", "p�", "ci", "sa", "bi", "ha", "sza", "b�", "d�s",
-			"pun", "ki", "ter", "kes", "p�s", "li", "szo", "fi", "pi", "ros",
-			"al", "ku", "sa", "ny�", "f�", "der", "s�", "ger", "g�", "rom",
+	private static final String[] SYL = { "tó", "dó", "ba", "ra", "ló", "ku",
+			"ma", "se", "pé", "ci", "sa", "bi", "ha", "sza", "bő", "dús",
+			"pun", "ki", "ter", "kes", "pás", "li", "szo", "fi", "pi", "ros",
+			"al", "ku", "sa", "nyá", "fő", "der", "ső", "ger", "gő", "rom",
 			"ka", "a"
 
 	};
