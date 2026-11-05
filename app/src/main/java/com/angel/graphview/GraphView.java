@@ -2,15 +2,13 @@ package com.angel.graphview;
 
 import java.util.ArrayList;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Matrix;
 import android.graphics.Paint;
-import android.graphics.Typeface;
 import android.util.AttributeSet;
-import android.util.FloatMath;
-import android.util.Log;
 import android.view.MotionEvent;
 
 import com.angel.activity.Shared;
@@ -50,12 +48,13 @@ public class GraphView extends HandlerAnimatedView implements
 
 	private static final int BG_COLOR;
 
-	private static final double FRICTION = 0.05 / 2.0; // pixels / frametime ^ 2
+	private static final float FRICTION =  (0.05f / 2.0f); // pixels / frametime ^ 2
 
 	// Circle radius in which no centralizing gravity applied (squared, px)
 	private static final float NO_GRAVITY_CIRCLE_2 = 1000;
 
-	private static final String TAG = "NodesView";
+	@SuppressWarnings("unused")
+    private static final String TAG = "NodesView";
 
 	private Callbacks mCallbacks;
 
@@ -70,10 +69,10 @@ public class GraphView extends HandlerAnimatedView implements
 	private boolean connectionModeOn;
 
 	// Manages spring forces between connected nodes
-	private EdgeRelaxer mEdgeRelaxer = new VisibleEdgeRelaxer();
+	private final EdgeRelaxer mEdgeRelaxer = new VisibleEdgeRelaxer();
 
 	// Manages gestures and camera movement
-	private GestureAndTransformationHandler mGestureAndTransformationHandler = new GestureAndTransformationHandler(
+	private final GestureAndTransformationHandler mGestureAndTransformationHandler = new GestureAndTransformationHandler(
 			this);
 
 	private GraphDatabase mGraphDatabase;
@@ -81,14 +80,14 @@ public class GraphView extends HandlerAnimatedView implements
 	private boolean mGraphFrozen;
 
 	// Helper matrix for drawing
-	private Matrix mHelperMatrix = new Matrix();
+	private final Matrix mHelperMatrix = new Matrix();
 
 	private String mLabelInput;
 
 	private Paint mPointerCirclePaint;
 
 	// Manages how nodes pushed apart
-	private Repulsor mRepulsor = new FastRepulsor();
+	private final Repulsor mRepulsor = new FastRepulsor();
 
 	// The current selected Node, null if no selection
 	private Node mSelected;
@@ -99,17 +98,17 @@ public class GraphView extends HandlerAnimatedView implements
 
 	public GraphView(Context context) {
 		super(context);
-		init(context);
+		init();
 	}
 
 	public GraphView(Context context, AttributeSet attrs) {
 		super(context, attrs);
-		init(context);
+		init();
 	}
 
 	public GraphView(Context context, AttributeSet attrs, int defStyle) {
 		super(context, attrs, defStyle);
-		init(context);
+		init();
 	}
 
 	public int getSelectedEdgeType() {
@@ -178,7 +177,8 @@ public class GraphView extends HandlerAnimatedView implements
 		}
 	}
 
-	public boolean onTouchEvent(final MotionEvent event) {
+	@SuppressLint("ClickableViewAccessibility")
+    public boolean onTouchEvent(final MotionEvent event) {
 		return mGestureAndTransformationHandler.onTouchEvent(event);
 	}
 
@@ -220,7 +220,7 @@ public class GraphView extends HandlerAnimatedView implements
 		}
 	}
 
-	public void relase() {
+	public void release() {
 		stopAnimation();
 		mGraphDatabase.close();
 	}
@@ -297,7 +297,7 @@ public class GraphView extends HandlerAnimatedView implements
 	private void commandAddNode(String labelTxt) {
 		Node n = new Node();
 
-		if (labelTxt.equals("")) {
+		if (labelTxt.isEmpty()) {
 			String randomString = Shared.createRandomString();
 			n.setLabel(randomString);
 		} else {
@@ -351,8 +351,8 @@ public class GraphView extends HandlerAnimatedView implements
 	}
 
 	private void getScreenCenterAbsoluteCoords(final float[] outPts) {
-		outPts[0] = getWidth() / 2;
-		outPts[1] = getHeight() / 2;
+		outPts[0] = (float) getWidth() / 2;
+		outPts[1] = (float) getHeight() / 2;
 
 		mGestureAndTransformationHandler.convertScreenCoordsToAbsolute(outPts);
 	}
@@ -363,7 +363,7 @@ public class GraphView extends HandlerAnimatedView implements
 
 	// ---$---$--- Action Methods ---$---$---
 
-	private void init(Context context) {
+	private void init() {
 		if (isInEditMode())
 			return;
 		float density = getContext().getResources().getDisplayMetrics().density;
@@ -422,7 +422,8 @@ public class GraphView extends HandlerAnimatedView implements
 
 	}
 
-	protected void onDraw(Canvas c) {
+	@SuppressWarnings("NullableProblems")
+    protected void onDraw(Canvas c) {
 
 		if (isInEditMode()) {
 			c.drawColor(0xff303070);
@@ -436,7 +437,8 @@ public class GraphView extends HandlerAnimatedView implements
 
 		c.save();
 
-		c.getMatrix(mHelperMatrix);
+        //noinspection deprecation
+        c.getMatrix(mHelperMatrix);
 
 		mHelperMatrix.preConcat(mGestureAndTransformationHandler
 				.getScreenTransformMatrix());
@@ -493,7 +495,7 @@ public class GraphView extends HandlerAnimatedView implements
 
 		mGestureAndTransformationHandler.onViewSizeChanged(w, h, oldw, oldh);
 
-		// Load if havent already
+		// Load if we haven't already
 		mGraphDatabase.loadGraph();
 	}
 

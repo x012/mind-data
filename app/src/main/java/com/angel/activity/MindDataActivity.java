@@ -347,7 +347,7 @@ public class MindDataActivity extends Activity implements GraphView.Callbacks {
 	protected void onDestroy() {
 		super.onDestroy();
 
-		mGraphView.relase();
+		mGraphView.release();
 		mRootLayout.removeView(mGraphView);
 	}
 
